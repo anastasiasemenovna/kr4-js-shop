@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Карточка товара учебного интернет-магазина.">
+  <title>Товар 1 — Магазин учебников</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+  <header>
+    <div class="site-header">
+      <a class="site-logo" href="index.html">ShopProject</a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="catalog.html">Каталог</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="index.html#advantages">Преимущества</a></li>
+          <li><a href="index.html#popular">Популярные товары</a></li>
+          <li><a href="index.html#contacts">Обратная связь</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <nav class="breadcrumbs" aria-label="Хлебные крошки">
+      <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <a class="breadcrumbs__link" href="catalog.html">Каталог</a>
+      <span class="breadcrumbs__current">Товар 1</span>
+    </nav>
+
+    <article class="product">
+      <div class="product__media">
+        <img
+          src="images/product-1-640.jpg"
+          srcset="images/product-1-480.jpg 480w,
+                  images/product-1-640.jpg 640w,
+                  images/product-1-960.jpg 960w"
+          sizes="(max-width: 639px) 100vw,
+                  (max-width: 1023px) 50vw,
+                  33vw"
+          alt="Товар 1"
+          width="640"
+          height="480"
+          loading="lazy"
+          class="product-card__image"
+        >
+      </div>
+
+      <div class="product__info">
+        <span class="badge">Новинка</span>
+        <h1 class="product__title">Поляков. Информатика 11 кл. Базовый и углубленный уровни. Учебник в 2ч.Ч.1</h1>
+        <p class="product__lead">
+          Учебник предназначен для изучения информатики на базовом и углублённом уровнях в 11 классах общеобразовательных организаций.
+        </p>
+
+        <p class="product__price">1072 руб.</p>
+        <div class="product__actions">
+          <a class="button" href="index.html#order-dialog">Оформить заказ</a>
+          <a class="button button--secondary" href="catalog.html">Назад в каталог</a>
+        </div>
+
+        <div class="alert">
+          Это учебная карточка товара. Данные используются для демонстрации
+          компонентов страницы.
+        </div>
+      </div>
+    </article>
+
+  <section class="section">
+  <h2>Характеристики</h2>
+
+    <div class="table-wrapper">
+      <table class="product-table">
+        <tbody>
+          <tr>
+            <th scope="row">Категория</th>
+            <td>Учебные товары</td>
+          </tr>
+          <tr>
+            <th scope="row">Цена</th>
+            <td>1072 руб.</td>
+          </tr>
+          <tr>
+            <th scope="row">Наличие</th>
+            <td>В наличии</td>
+          </tr>
+          <tr>
+            <th scope="row">Автор</th>
+            <td>Поляков К.Ю., Еремин Е.А.</td>
+          </tr>
+          <tr>
+            <th scope="row">Класс</th>
+            <td>11</td>
+          </tr>
+          <tr>
+            <th scope="row">Уровень</th>
+            <td>Базовый и углублённый</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+    <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+  </footer>
+</body>
+</html>

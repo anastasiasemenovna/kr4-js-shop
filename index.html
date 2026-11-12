@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Учебный интернет-магазин учебников: популярные товары, преимущества проекта и оформление заявки без регистрации.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Магазин учебников">
+  <meta property="og:description" content="Учебный frontend-проект интернет-магазина.">
+  <title>Каталог товаров</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+  <script src="js/modal.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к основному содержимому</a>
+    <header class="shop-header">
+    <h1 class="shop-title">Магазин учебников</h1>
+  </header>
+  <header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-header__logo" href="index.html">ShopProject</a>
+    <nav class="site-nav" aria-label="Основная навигация">
+      <ul class="site-nav__list">
+        <li class="site-nav__item"><a class="site-nav__link" class="site-nav__link site-nav__link--active" href="index.html">Главная</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="index.html#advantages">Преимущества</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="index.html#popular">Популярные товары</a></li>
+        <li class="site-nav__item"><a class="site-nav__link" href="feedback.html">Обратная связь</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>  
+
+  <main id="main" class="main">
+    <!-- Основное содержимое страницы -->
+    <section class="section">
+      <h2>Главная страница проекта</h2>
+      <p>
+        Это стартовая страница учебного frontend-проекта.
+        В дальнейшем здесь будет разработан многостраничный сайт
+        интернет-магазина или каталога услуг.
+      </p>
+    </section>
+<section class="section">
+  <h2>О проекте</h2>
+  <p>
+    В рамках данного проекта будет разработан многостраничный сайт
+    интернет-магазина или каталога услуг. Проект будет постепенно
+    расширяться на следующих практических занятиях.
+  </p>
+</section>
+<section class="section js-check" aria-labelledby="js-check-title">
+  <h2 id="js-check-title">Проверка JavaScript</h2>
+  <p class="js-message">JavaScript пока не выполнился.</p>
+  <pre class="product-output"></pre>
+</section>
+<section class="hero">
+  <picture>
+    <source media="(min-width: 1200px)" srcset="images/hero-desktop.jpg">
+    <source media="(min-width: 768px)" srcset="images/hero-tablet.jpg">
+    <img
+      src="images/hero-mobile.jpg"
+      alt="Каталог учебных товаров"
+      width="640"
+      height="360"
+      class="hero__image"
+    >
+  </picture>
+  <h1>Учебный интернет-магазин</h1>
+  <p>
+    Это стартовая страница учебного frontend-проекта.
+    В дальнейшем на её основе будет разработан многостраничный сайт
+    интернет-магазина или каталога услуг.
+  </p>
+  <a class="button" href="#popular">Перейти к товарам</a>
+  </section>
+<section class="section" id="advantages">
+  <h2>Преимущества проекта</h2>
+
+  <ul class="advantages-list">
+    <li>понятная HTML-структура;</li>
+    <li>семантические блоки страницы;</li>
+    <li>подключение внешнего CSS-файла;</li>
+    <li>подготовка к разработке многостраничного сайта.</li>
+  </ul>
+</section>
+<section class="section" id="popular">
+  <h2>Популярные товары</h2>
+
+  <div class="products-grid">
+    <article class="product-card">
+      <h3 class="product-card__title">Поляков. Информатика 11 кл. Базовый и углубленный уровни. Учебник в 2ч.Ч.2</h3>
+      <p class="product-card__description">Учебник предназначен для изучения информатики на базовом и углублённом уровнях в 11 классах общеобразовательных организаций.</p>
+      <p class="product-card__price">Цена: 1072 руб.</p>
+      <button class="button product-card__button" type="button" data-product="Товар 1">
+        Заказать
+      </button>
+    </article>
+
+    <article class="product-card">
+      <h3 class="product-card__title">Геометрия. 10-11 класс. Учебник. Базовый и углублённый уровни</h3>
+      <p class="product-card__description">Учебник позволяет обеспечить вариативность обучения не только согласно системе условных обозначений, но и благодаря хорошо подобранной системе задач, включающей типовые задачи к каждому параграфу, дополнительные задачи к главе и задачи повышенной трудности.</p>
+      <p class="product-card__price">Цена: 1153 руб.</p>
+      <button class="button product-card__button" type="button" data-product="Товар 2">
+        Заказать
+      </button>
+    </article>
+
+    <article class="product-card">
+      <h3 class="product-card__title">Физика. 11 класс. Учебник. Базовый и углублённый уровни</h3>
+      <p class="product-card__description">Учебник соответствует ФГОС 2021 г. Материал учебника, завершающего предметную линию «Классический курс».</p>
+      <p class="product-card__price">Цена: 1291 руб.</p>
+      <button class="button product-card__button" type="button" data-product="Товар 3">
+        Заказать
+      </button>
+    </article>
+  </div>
+</section>
+<aside class="aside-info">
+  <h2>Информация для студентов</h2>
+  <p>
+    На следующих практических занятиях этот проект будет расширяться:
+    появятся формы, модальное окно, дополнительные страницы, Flex/Grid,
+    БЭМ-структура и адаптивная версия сайта.
+  </p>
+</aside>
+  </main>
+<footer id="contacts">
+  <p>&copy; 2026 Учебный проект. Все права защищены.</p>
+  <p>Дисциплина: Фронтенд и бэкенд разработка</p>
+</footer>
+<dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+  <h2 class="order-dialog__title" id="order-dialog-title">Оформление заявки</h2>
+  <form class="order-form" id="order-form" action="#" method="post" novalidate>
+  <div class="order-form__field">
+    <label class="order-form__label" for="order-name">Имя</label>
+    <input
+      class="order-form__input"
+      id="order-name"
+      name="name"
+      type="text"
+      required
+    >
+  </div>
+
+  <div class="order-form__field">
+    <label class="order-form__label" for="order-email">E-mail</label>
+    <input
+      class="order-form__input"
+      id="order-email"
+      name="email"
+      type="email"
+      required
+    >
+  </div>
+
+  <div class="order-form__actions">
+    <button class="button button--secondary" type="button" id="close-order-dialog">
+      Закрыть
+    </button>
+    <button class="button button--primary" type="submit">
+      Отправить заявку
+    </button>
+  </div>
+  </form>
+</dialog>
+
+<p class="success-message" id="success-message" hidden>
+  Форма успешно отправлена!
+</p>
+</body>
+</html>
