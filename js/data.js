@@ -52,5 +52,23 @@ const products = [
     discountPercent: 0,
     rating: 4.3,
     isAvailable: false
+  },
+  {
+    id: 7,
+    title: 'Обществознание. 10 класс. Базовый уровень. Учебник',
+    category: 'educational products',
+    price: 622,
+    discountPercent: 0,
+    rating: 4.3,
+    isAvailable: true
+  },
+  {
+    id: 8,
+    title: 'Математика. Вероятность и статистика. 7-9 классы. Базовый уровень. Учебник. В 2 ч. Часть 1',
+    category: 'educational products',
+    price: 666,
+    discountPercent: 0,
+    rating: 4.3,
+    isAvailable: false
   }
 ];

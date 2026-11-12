@@ -7,6 +7,8 @@
   <title>Каталог товаров — Магазин учебников</title>
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
+  <script src="js/data.js" defer></script>
+  <script src="js/catalog.js" defer></script>
 </head>
 <body>
   <header>
@@ -18,6 +20,7 @@
           <li><a href="index.html">Главная</a></li>
           <li><a href="catalog.html">Каталог</a></li>
           <li><a href="contacts.html">Контакты</a></li>
+          <li><a href="order.html">Заказ</a></li>
           <li><a href="index.html#advantages">Преимущества</a></li>
           <li><a href="index.html#popular">Популярные товары</a></li>
           <li><a href="index.html#contacts">Обратная связь</a></li>
@@ -39,6 +42,7 @@
         В дальнейшем здесь будут добавлены фильтры, сортировка и более
         подробные карточки.
       </p>
+      <p class="cart-counter" aria-live="polite">В корзине: 0</p>
     </section>
 
     <section class="catalog-layout">
@@ -47,72 +51,53 @@
 
     <form class="filters-form" action="#" method="get">
       <fieldset>
-        <legend>Категория</legend>
-
-        <label>
-          <input type="checkbox" name="category" value="all">
-          Все товары
-        </label>
-
-        <label>
-          <input type="checkbox" name="category" value="popular">
-          Популярные
-        </label>
-
-        <label>
-          <input type="checkbox" name="category" value="new">
-          Новинки
-        </label>
+        <div class="catalog-controls__group"></div>
+        <legend for="catalog-search">Поиск товаров</legend>
+        <input
+        id="catalog-search"
+        class="catalog-controls__input"
+        type="search"
+        placeholder="Введите название товара"
+        autocomplete="off"
+        >
+        </div>
+      </fieldset>
+      <fieldset>
+        <div class="catalog-controls__group"></div>
+        <legend for="category-filter">Категория</legend>
+        <select id="category-filter" class="catalog-controls__select">
+        <option value="all">Все категории</option>
+        <option value="educational products">Учебники</option>
+        <option value="stationery">Канцтовары</option>
+        </select>
+        </div>
       </fieldset>
 
       <fieldset>
-        <legend>Цена</legend>
-
-        <label for="price-from">От</label>
-        <input id="price-from" name="price-from" type="number" min="0" placeholder="0">
-
-        <label for="price-to">До</label>
-        <input id="price-to" name="price-to" type="number" min="0" placeholder="5000">
+        <div class="catalog-controls__group"></div>
+        <legend for="sort-select">Сортировка</legend>
+        <select id="sort-select" class="catalog-controls__select">
+        <option value="default">По умолчанию</option>
+        <option value="price-asc">Сначала дешевле</option>
+        <option value="price-desc">Сначала дороже</option>
+        <option value="title-asc">По названию А-Я</option>
+        </select>
+        </div>
       </fieldset>
 
-      <button class="button" type="submit">Применить</button>
+      <button id="myButton" class="button" type="submit">Применить</button>
+      
     </form>
   </aside>
 
   <section class="catalog-products">
-    <h2>Список товаров</h2>
+    <p class="catalog-count" aria-live="polite"></p>
+    <p class="catalog-empty" hidden>По выбранным условиям товары не найдены.</p>
 
-    <div class="products-grid">
-      <!-- Карточки товаров -->
-    </div>
+    <div class="products-grid" data-products-container></div>
   </section>
 </section>
-
-    <section class="section">
-      <h2>Список товаров</h2>
-
-      <article class="product-card">
-        <h3>Поляков. Информатика 11 кл. Базовый и углубленный уровни. Учебник в 2ч.Ч.1</h3>
-        <p>Учебник предназначен для изучения информатики на базовом и углублённом уровнях в 11 классах общеобразовательных организаций.</p>
-        <p>Цена: 1072 руб.</p>
-        <a class="button product-card__button" href="product1.html">Подробнее</a>
-      </article>
-
-      <article class="product-card">
-        <h3>Геометрия. 10-11 класс. Учебник. Базовый и углублённый уровни</h3>
-        <p>Учебник позволяет обеспечить вариативность обучения не только согласно системе условных обозначений, но и благодаря хорошо подобранной системе задач, включающей типовые задачи к каждому параграфу, дополнительные задачи к главе и задачи повышенной трудности.</p>
-        <p>Цена: 1153 руб.</p>
-        <a class="button product-card__button" href="index.html#popular">Подробнее</a>
-      </article>
-
-      <article class="product-card">
-        <h3>Физика. 11 класс. Учебник. Базовый и углублённый уровни</h3>
-        <p>Учебник соответствует ФГОС 2021 г. Материал учебника, завершающего предметную линию «Классический курс».</p>
-        <p>Цена: 1291 руб.</p>
-        <a class="button product-card__button" href="index.html#popular">Подробнее</a>
-      </article>
-    </section>
-  </main>
+</main>
 
   <footer>
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
