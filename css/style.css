@@ -714,3 +714,68 @@ html {
   background-color: #111827;
   border-radius: 8px;
 }
+
+/* ---------- Корзина на странице заказа ---------- */
+.cart-summary {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fafafa;
+}
+
+.cart-summary h3 {
+  margin: 0 0 0.75rem;
+}
+
+.cart-summary__list {
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+}
+
+.cart-summary__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.cart-summary__item:last-child {
+  border-bottom: none;
+}
+
+.cart-summary__title {
+  flex: 1;
+}
+
+.cart-summary__price {
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.cart-summary__remove {
+  border: none;
+  background: transparent;
+  color: #c00;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 0.25rem;
+}
+
+.cart-summary__remove:hover {
+  color: #900;
+}
+
+.cart-summary__total {
+  margin: 0;
+  font-weight: bold;
+  text-align: right;
+}
+
+.cart-summary__empty {
+  color: #888;
+  margin: 0;
+}
