@@ -262,7 +262,7 @@
 
 ## Ссылка на опубликованный проект
 
-GitHub Pages: 
+GitHub Pages: https://anastasiasemenovna.github.io/kr4-js-shop
 
 ## Автор
 

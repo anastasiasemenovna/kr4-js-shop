@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
   <script src="js/validation.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/catalog.js" defer></script>
+  <script src="js/cart-page.js" defer></script>
 </head>
 <body>
   <header>
@@ -35,45 +38,54 @@
     </nav>
 
     <section class="section" id="feedback">
-    <h2>Заказ</h2>
-    <button class="button" type="button" id="open-feedback-dialog">
-      Заполнить форму
-    </button>
-     </section>
+      <h2>Заказ</h2>
 
-     <!-- В самом низу body, перед </body> -->
-<dialog class="order-dialog" id="feedback-dialog" aria-labelledby="feedback-dialog-title">
-  <h2 class="order-dialog__title" id="feedback-dialog-title">Обратная связь</h2>
-
-    <form class="order-form" action="#" method="post" novalidate>
-      <div class="order-form__group">
-        <label class="order-form__label" for="fb-name">Имя</label>
-        <input class="order-form__input" id="order-name"  name="name"  type="text" required>
-        <p class="form-error" id="order-name-error"></p>
+      <div class="cart-summary">
+        <h3>Ваша корзина</h3>
+        <ul class="cart-summary__list" id="cart-items"></ul>
+        <p class="cart-summary__empty" id="cart-empty" hidden>Корзина пуста.</p>
+        <p class="cart-summary__total">Итого: <span id="cart-total">0 руб.</span></p>
       </div>
 
-      <div class="order-form__group">
-        <label class="order-form__label" for="fb-email">E-mail</label>
-        <input class="order-form__input" id="order-email" name="email" type="email" required>
-        <p class="form-error" id="order-email-error"></p>
-      </div>
+      <button class="button" type="button" id="open-feedback-dialog">
+        Заполнить форму
+      </button>
+    </section>
 
-      <div class="order-form__group order-form__group--wide">
-        <label for="order-phone">Телефон</label>
-        <input class="order-form__input" id="order-phone" name="phone" type="tel">
-        <p class="form-error" id="order-phone-error"></p>
-      </div>
+    <!-- В самом низу body, перед </body> -->
+    <dialog class="order-dialog" id="feedback-dialog" aria-labelledby="feedback-dialog-title">
+      <h2 class="order-dialog__title" id="feedback-dialog-title">Обратная связь</h2>
 
-      <div class="order-form__actions">
-        <button class="button button--secondary" type="button" id="close-feedback-dialog">
-          Закрыть
-        </button>
-        <button type="submit" class="button button--secondary">Отправить заявку</button>
-      </div>
-      <p class="form-message" aria-live="polite"></p>
-    </form>
-  </dialog>
+      <form class="order-form" action="#" method="post" novalidate>
+        <div class="order-form__group">
+          <label class="order-form__label" for="fb-name">Имя</label>
+          <input class="order-form__input" id="order-name"  name="name"  type="text" required>
+          <p class="form-error" id="order-name-error"></p>
+        </div>
+
+        <div class="order-form__group">
+          <label class="order-form__label" for="fb-email">E-mail</label>
+          <input class="order-form__input" id="order-email" name="email" type="email" required>
+          <p class="form-error" id="order-email-error"></p>
+        </div>
+
+        <div class="order-form__group order-form__group--wide">
+          <label for="order-phone">Телефон</label>
+          <input class="order-form__input" id="order-phone" name="phone" type="tel">
+          <p class="form-error" id="order-phone-error"></p>
+        </div>
+
+        <div class="order-form__actions">
+          <button class="button button--secondary" type="button" id="close-feedback-dialog">
+            Закрыть
+          </button>
+          <button type="submit" class="button button--secondary">Отправить заявку</button>
+        </div>
+        <p class="form-message" aria-live="polite"></p>
+      </form>
+    </dialog>
   </main>
+
   <footer>
     <p>&copy; 2026 Учебный проект. Все права защищены.</p>
     <p>Дисциплина: Фронтенд и бэкенд разработка</p>
